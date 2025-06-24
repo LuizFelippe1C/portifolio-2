@@ -6,35 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Meu Portfólio</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .badge {
+            font-size: 1rem;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 50px;
+        }
+
+        .badge.bg-secondary {
+            background-color: #6c757d;
+        }
+
+        .badge.bg-primary {
+            background-color: #007bff;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            background-color: #ffffff;
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        footer a {
+            color: #007bff;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 
 <body>
     <header class="container text-center">
-        <img src="img/eu.png" alt="avatar do Luiz" class="rounded-circle" width="150" height="150">
         <p class="lead">Eu sou Luiz Felippe</p>
         <h1>Eu aprendo Programação</h1>
         <p>Sou um estudante da E.E Astrogildo Arruda e sou um programador de software que utiliza HTML, CSS e JavaScript. Veja os projetos que já desenvolvi!</p>
         <p>Minhas habilidades</p>
         <div>
-            <p class="badge bg-secondary">HTML</p>
-            <p class="badge bg-secondary">CSS</p>
-            <p class="badge bg-secondary">JavaScript</p>
-            <p class="badge bg-secondary">Scratch</p>
+            <p class="badge bg-primary">HTML</p>
+            <p class="badge bg-primary">CSS</p>
+            <p class="badge bg-primary">JavaScript</p>
+            <p class="badge bg-primary">Scratch</p>
         </div>
     </header>
 
     <main class="container mt-5">
-        <h2>Meus Projetos</h2>
+        <h2 class="text-center">Meus Projetos</h2>
         <div class="row">
+
             <!-- Projeto 1 -->
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Jogo Quente ou Frio: Adivinhe o Número!</h5>
                         <p class="card-text">
-                            Este projeto é um jogo web interativo onde o jogador deve adivinhar um número secreto. A cada tentativa, o sistema responde com dicas como "quente", "morno" ou "frio", indicando o quão perto o palpite está da resposta correta. O layout da página é estilizado com CSS para uma experiência visual envolvente, utilizando fontes externas do Google Fonts para deixar tudo mais moderno e divertido.
+                            Este projeto é um jogo web interativo onde o jogador deve adivinhar um número secreto. A cada tentativa, o sistema responde com dicas como "quente", "morno" ou "frio", indicando o quão perto o palpite está da resposta correta.
                         </p>
                         <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja o projeto</button>
                     </div>
@@ -42,7 +114,7 @@
             </div>
 
             <!-- Projeto 2 -->
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Efeito Monalisa: Uma Ilusão que Te Observa</h5>
@@ -65,10 +137,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Este projeto é um jogo interativo de adivinhação, onde o objetivo é descobrir um número secreto gerado aleatoriamente pelo sistema. A dinâmica do jogo utiliza as pistas “quente” e “frio” para indicar se o palpite do jogador está próximo ou distante do número correto.</p>
-                    <p>O jogo é desenvolvido com HTML, CSS e JavaScript. O HTML estrutura a página com um título chamativo, campos para inserir palpites e botões para interação. O CSS estiliza os elementos com cores vibrantes e feedback visual, criando uma atmosfera divertida e desafiadora.</p>
-                    <p>O JavaScript é responsável pela lógica do jogo: ele gera o número secreto, compara os palpites dados, fornece as dicas e atualiza dinamicamente o conteúdo da página. Cada tentativa gera uma resposta imediata, tornando a experiência envolvente.</p>
-                    <p>Esse tipo de jogo é excelente para quem está aprendendo programação, pois trabalha eventos, DOM, lógica condicional e loops.</p>
+                    <p>Este projeto é um jogo interativo de adivinhação, onde o objetivo é descobrir um número secreto gerado aleatoriamente pelo sistema...</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://editor.p5js.org/LuizFelippeAlves/sketches/X1XHDchIV">Ver projeto ao vivo</a>
@@ -87,9 +156,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Este projeto é uma aplicação web que simula o famoso "Efeito Monalisa", no qual a imagem de uma figura parece seguir o olhar da pessoa observadora. O site utiliza HTML, CSS e JavaScript para proporcionar uma experiência visual instigante e envolvente.</p>
-                    <p>O HTML estrutura a página com a imagem principal, elementos interativos e explicações sobre o fenômeno visual. O CSS cria um visual elegante e responsivo, enquanto o JavaScript rastreia a posição do cursor e atualiza o olhar da figura em tempo real.</p>
-                    <p>Esse comportamento dinâmico cria a impressão de que a imagem está sempre observando o visitante. Além de entreter, o projeto propõe uma reflexão sobre percepção, arte e interação humano-computador.</p>
+                    <p>Este projeto é uma aplicação web que simula o famoso "Efeito Monalisa", no qual a imagem de uma figura parece seguir o olhar da pessoa observadora...</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://editor.p5js.org/LuizFelippeAlves/sketches/L1lJsicpD">Ver projeto ao vivo</a>
@@ -99,13 +166,13 @@
         </div>
     </div>
 
-    <footer class="container py-5">
+    <footer>
         <h2>Entre em contato</h2>
         <div>
             <i class="bi bi-github"></i>
             <a href="https://github.com/femascheti">GitHub</a>
         </div>
-        <p class="my-5 text-center">&copy; Copyright 2024. Produzido por Fernanda Mascheti</p>
+        <p class="my-5">&copy; Copyright 2025. Produzido por Luiz Felippe</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
